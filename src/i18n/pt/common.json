@@ -1,0 +1,16 @@
+{
+  "brand": "Temporada Azul",
+  "nav": {
+    "home": "Início",
+    "whales": "Avistamento de Baleias",
+    "fishing": "Pescarias",
+    "beaches": "Tour pelas Praias/Churrasco",
+    "bbq": "Festas/Eventos a Bordo",
+    "about": "Sobre",
+    "contact": "Contato"
+  },
+  "cta": {
+    "bookNow": "Reserve Agora",
+    "whatsapp": "Falar no WhatsApp"
+  }
+}

@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Source Sans 3", "Helvetica Neue", Arial, sans-serif;
+  color: #0b1c4a;
+  background-color: #eaf4ff;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+}
+
+#root {
+  min-height: 100svh;
+}
