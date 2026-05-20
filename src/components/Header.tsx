@@ -11,7 +11,7 @@ const Header = () => {
   const { openReservation } = useReservation();
 
   const linkClass = ({ isActive }: { isActive: boolean }) =>
-    `text-sm tracking-wide uppercase ${isActive ? "text-deep-800" : "text-ink-600"} hover:text-deep-800`;
+    `whitespace-nowrap text-sm tracking-wide uppercase ${isActive ? "text-deep-800" : "text-ink-600"} hover:text-deep-800`;
 
   const mobileLinkBase =
     "block rounded-xl px-4 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-ink-700 hover:bg-deep-50";

@@ -9,6 +9,8 @@ type ImageCarouselProps = {
   imagePosition?: string;
   className?: string;
   intervalMs?: number;
+  clickToNext?: boolean;
+  consumeClick?: boolean;
 };
 
 const ImageCarousel = ({
@@ -20,6 +22,8 @@ const ImageCarousel = ({
   imagePosition,
   className,
   intervalMs = 5000,
+  clickToNext = true,
+  consumeClick = false,
 }: ImageCarouselProps) => {
   const safeImages = useMemo(
     () => (images.length > 0 ? images : [fallbackSrc]),
@@ -41,12 +45,35 @@ const ImageCarousel = ({
   }, [index, safeImages]);
 
   const currentFit = fitByIndex?.[index] ?? fit;
+  const canAdvance = clickToNext && safeImages.length > 1;
 
   return (
     <div
       className={`relative overflow-hidden ${
         currentFit === "contain" ? "bg-deep-50" : ""
-      } ${className ?? ""}`.trim()}
+      } ${canAdvance ? "cursor-pointer select-none" : ""} ${className ?? ""}`.trim()}
+      role={canAdvance ? "button" : undefined}
+      tabIndex={canAdvance ? 0 : undefined}
+      aria-label={canAdvance ? "Ver próxima imagem" : undefined}
+      onClick={(event) => {
+        if (!canAdvance) return;
+        if (consumeClick) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        setIndex((prev) => (prev + 1) % safeImages.length);
+      }}
+      onKeyDown={(event) => {
+        if (!canAdvance) return;
+        if (event.key !== "Enter" && event.key !== " ") return;
+        if (consumeClick) {
+          event.preventDefault();
+          event.stopPropagation();
+        } else {
+          event.preventDefault();
+        }
+        setIndex((prev) => (prev + 1) % safeImages.length);
+      }}
     >
       <img
         src={isFallback ? fallbackSrc : safeImages[index]}

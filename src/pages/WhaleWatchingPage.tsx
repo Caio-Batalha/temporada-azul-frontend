@@ -60,7 +60,7 @@ const WhaleWatchingPage = () => {
                   <p className="text-[11px] uppercase tracking-[0.25em] text-deep-700">
                     Horário de chegada
                   </p>
-                  <p className="mt-1 text-sm font-semibold text-ink-800">15:00</p>
+                  <p className="mt-1 text-sm font-semibold text-ink-800">por volta de 14:00</p>
                 </div>
               </div>
 
@@ -75,10 +75,10 @@ const WhaleWatchingPage = () => {
                 </div>
                 <div className="rounded-xl border border-deep-100 bg-deep-50/60 p-3">
                   <p className="text-[11px] uppercase tracking-[0.25em] text-deep-700">
-                    Duração
+                    Duração do passeio
                   </p>
                   <p className="mt-1 text-sm font-semibold text-ink-800">
-                    8 horas de experiência no mar
+                    Cerca de 7 horas de experiência
                   </p>
                 </div>
               </div>
