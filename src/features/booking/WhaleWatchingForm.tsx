@@ -55,7 +55,7 @@ const formSchema = z
 
 type FormValues = z.infer<typeof formSchema>;
 
-const UNIT_PRICE_CENTS = 42000;
+const UNIT_PRICE_CENTS = 40000;
 
 const WhaleWatchingForm = () => {
   const { data: tours = [], isLoading } = useQuery({
