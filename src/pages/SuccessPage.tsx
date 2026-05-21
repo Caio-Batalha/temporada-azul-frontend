@@ -1,6 +1,7 @@
 import { useSearchParams, Link } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import { fetchBookingStatusBySession } from "../api/bookings";
+import TourInstructionsModal from "../components/TourInstructionsModal";
 
 const SuccessPage = () => {
   const [params] = useSearchParams();
@@ -46,6 +47,12 @@ const SuccessPage = () => {
           </p>
         )}
       </div>
+
+      {isPaid && (
+        <div className="mt-8">
+          <TourInstructionsModal buttonLabel="Reler informações importantes do passeio" />
+        </div>
+      )}
 
       <div className="mt-8 flex flex-wrap gap-4">
         <Link

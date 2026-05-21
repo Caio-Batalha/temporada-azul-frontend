@@ -1,5 +1,6 @@
 import WhaleWatchingForm from "../features/booking/WhaleWatchingForm";
 import ImageCarousel from "../components/ImageCarousel";
+import TourInstructionsModal from "../components/TourInstructionsModal";
 
 const WhaleWatchingPage = () => {
   return (
@@ -82,6 +83,10 @@ const WhaleWatchingPage = () => {
                   </p>
                 </div>
               </div>
+            </div>
+
+            <div className="mt-6 flex justify-center">
+              <TourInstructionsModal />
             </div>
           </div>
         </div>
