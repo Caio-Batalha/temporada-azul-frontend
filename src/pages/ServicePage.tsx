@@ -26,7 +26,7 @@ const ServicePage = ({
   const whatsappUrl = buildWhatsAppUrl(whatsappMessage);
 
   return (
-    <section className="mx-auto max-w-6xl px-6 py-16">
+    <section className="mx-auto max-w-6xl lg:max-w-7xl xl:max-w-[1440px] px-6 py-16">
       <div className="grid gap-10 lg:grid-cols-[1fr_0.9fr]">
         <div className="order-2 lg:order-1">
           <p className="text-xs uppercase tracking-[0.4em] text-deep-700">Temporada Azul</p>

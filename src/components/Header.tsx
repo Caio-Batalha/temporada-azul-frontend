@@ -18,7 +18,7 @@ const Header = () => {
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-deep-100 bg-white/80 backdrop-blur">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+      <div className="mx-auto flex max-w-6xl lg:max-w-7xl xl:max-w-[1440px] items-center justify-between px-6 py-4">
         <NavLink to="/" className="flex items-center gap-3">
           <img
             src="/media/icon.jpg"

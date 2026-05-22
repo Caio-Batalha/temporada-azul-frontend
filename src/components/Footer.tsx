@@ -4,7 +4,7 @@ import { CONTACT_EMAIL, WHATSAPP_NUMBER_DISPLAY } from "../config/contact";
 const Footer = () => {
   return (
     <footer className="border-t border-deep-100 bg-deep-50/70">
-      <div className="mx-auto grid max-w-6xl gap-8 px-6 py-12 md:grid-cols-3">
+      <div className="mx-auto grid max-w-6xl lg:max-w-7xl xl:max-w-[1440px] gap-8 px-6 py-12 md:grid-cols-3">
         <div>
           <p className="font-display text-xl text-ink-700">Temporada Azul</p>
           <p className="mt-2 text-sm text-ink-600">
