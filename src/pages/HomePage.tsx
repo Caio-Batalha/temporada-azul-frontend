@@ -10,7 +10,7 @@ const HomePage = () => {
   return (
     <div>
       <section className="relative overflow-hidden px-6 pb-16 pt-12">
-        <div className="mx-auto grid max-w-6xl lg:max-w-7xl xl:max-w-[1440px] gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:gap-10">
+        <div className="mx-auto grid max-w-6xl lg:max-w-7xl xl:max-w-[1440px] gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:gap-10">
           <div className="order-2 lg:order-1">
             <p className="text-xs uppercase tracking-[0.4em] text-deep-700">
               Temporada Azul
