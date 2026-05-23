@@ -4,6 +4,7 @@ import Header from "./Header";
 import Footer from "./Footer";
 import ReservationModal from "./ReservationModal";
 import MobileBottomBar from "./MobileBottomBar";
+import ScrollToTop from "./ScrollToTop";
 import ReservationContext from "../app/reservation";
 
 const AppShell = () => {
@@ -17,6 +18,7 @@ const AppShell = () => {
         closeReservation: () => setReservationOpen(false),
       }}
     >
+      <ScrollToTop />
       <ReservationModal open={reservationOpen} onClose={() => setReservationOpen(false)} />
       <div className="min-h-screen bg-sea-gradient text-ink-600">
       <Header />
