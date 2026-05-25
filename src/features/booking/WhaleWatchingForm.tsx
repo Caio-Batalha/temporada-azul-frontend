@@ -280,7 +280,40 @@ const WhaleWatchingForm = () => {
             )}
           </div>
         </div>
-        <div className="mt-6 grid gap-4 md:grid-cols-2">
+        <div className="mt-6 rounded-xl border border-ocean-100 bg-ocean-50/60 p-4">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-ocean-700">
+            Preços e ofertas por pessoa
+          </p>
+          <ul className="mt-3 grid gap-3 text-sm text-ink-600 md:grid-cols-3">
+            <li className="rounded-lg bg-white/70 p-3">
+              <p className="font-semibold text-ink-700">Padrão</p>
+              <p className="text-xs text-ink-500">1 ou 2 ingressos</p>
+              <p className="mt-1 font-semibold text-ink-700">
+                {formatCurrencyBRL(UNIT_PRICE_CENTS)} por pessoa
+              </p>
+            </li>
+            <li className="rounded-lg bg-white/70 p-3">
+              <p className="font-semibold text-ink-700">
+                Trio + <span className="text-xs font-normal text-ocean-600">(5% off)</span>
+              </p>
+              <p className="text-xs text-ink-500">3 ou 4 ingressos</p>
+              <p className="mt-1 font-semibold text-ink-700">
+                {formatCurrencyBRL(Math.round(UNIT_PRICE_CENTS * 0.95))} por pessoa
+              </p>
+            </li>
+            <li className="rounded-lg bg-white/70 p-3">
+              <p className="font-semibold text-ink-700">
+                Grupo <span className="text-xs font-normal text-ocean-600">(10% off)</span>
+              </p>
+              <p className="text-xs text-ink-500">5 ou mais ingressos</p>
+              <p className="mt-1 font-semibold text-ink-700">
+                {formatCurrencyBRL(Math.round(UNIT_PRICE_CENTS * 0.9))} por pessoa
+              </p>
+            </li>
+          </ul>
+        </div>
+
+        <div className="mt-4 grid gap-4 md:grid-cols-2">
           <div className="max-w-xs">
             <label className="text-xs uppercase tracking-[0.2em] text-ocean-600">
               Número de ingressos
