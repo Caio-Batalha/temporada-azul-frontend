@@ -127,8 +127,8 @@ const WhaleWatchingForm = () => {
   }, [buyerName, buyerCpf, buyerWhatsapp, setValue]);
 
   const offerCode = useMemo(() => {
-    if (ticketCount === 3) return "trio_deal";
-    if (ticketCount >= 4) return "group_deal";
+    if (ticketCount === 3 || ticketCount === 4) return "trio_deal";
+    if (ticketCount >= 5) return "group_deal";
     return "standard";
   }, [ticketCount]);
 
@@ -298,7 +298,7 @@ const WhaleWatchingForm = () => {
                 {offerCode === "standard"
                   ? "Padrão"
                   : offerCode === "trio_deal"
-                  ? "Trio (5%)"
+                  ? "Trio + (5%)"
                   : "Grupo (10%)"}
               </strong>
             </p>
