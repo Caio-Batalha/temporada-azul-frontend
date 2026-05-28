@@ -51,5 +51,5 @@ export const bookingStatusSchema = z.object({
   total_amount_cents: z.number(),
   status: z.string(),
   hold_expires_at: z.string().nullable().optional(),
-  stripe_session_id: z.string().nullable().optional(),
+  mp_preference_id: z.string().nullable().optional(),
 });

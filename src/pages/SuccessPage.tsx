@@ -5,7 +5,9 @@ import TourInstructionsModal from "../components/TourInstructionsModal";
 
 const SuccessPage = () => {
   const [params] = useSearchParams();
-  const sessionId = params.get("session_id");
+  // MP Checkout Pro appends preference_id to the success URL automatically.
+  // Fallback to session_id for backward compatibility.
+  const sessionId = params.get("preference_id") ?? params.get("session_id");
 
   const { data, isLoading } = useQuery({
     queryKey: ["booking-status", sessionId],

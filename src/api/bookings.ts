@@ -33,7 +33,7 @@ export type BookingStatus = {
   total_amount_cents: number;
   status: string;
   hold_expires_at?: string | null;
-  stripe_session_id?: string | null;
+  mp_preference_id?: string | null;
 };
 
 export const createHold = async (payload: HoldRequest): Promise<HoldResponse> => {
