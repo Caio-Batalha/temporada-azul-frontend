@@ -123,7 +123,6 @@ const HomePage = () => {
                   ]}
                   alt={service.title}
                   fallbackSrc="/media/fishing.svg"
-                  consumeClick
                   className="h-36 w-full rounded-2xl shadow-[0_14px_34px_rgba(7,28,68,0.14)] transition-transform duration-200 group-hover:-translate-y-0.5 group-hover:shadow-[0_20px_48px_rgba(7,28,68,0.16)] sm:h-40"
                   intervalMs={5000}
                 />
@@ -138,7 +137,6 @@ const HomePage = () => {
                       ? "/media/beach.svg"
                       : "/media/bbq.svg"
                   }
-                  consumeClick
                   className="h-36 w-full rounded-2xl shadow-[0_14px_34px_rgba(7,28,68,0.14)] transition-transform duration-200 group-hover:-translate-y-0.5 group-hover:shadow-[0_20px_48px_rgba(7,28,68,0.16)] sm:h-40"
                   intervalMs={5000}
                 />
