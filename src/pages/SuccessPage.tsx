@@ -1,3 +1,4 @@
+import { useEffect, useRef } from "react";
 import { useSearchParams, Link } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import { fetchBookingStatusBySession } from "../api/bookings";
@@ -19,10 +20,22 @@ const SuccessPage = () => {
   const status = data?.status ?? "processing";
   const isPaid = !isLoading && status === "paid";
 
+  // Meta Pixel — Purchase (fires exactly once when payment is confirmed)
+  const purchaseFiredRef = useRef(false);
+  useEffect(() => {
+    if (isPaid && !purchaseFiredRef.current && typeof window !== "undefined" && (window as any).fbq) {
+      purchaseFiredRef.current = true;
+      (window as any).fbq("track", "Purchase", {
+        value: 400,
+        currency: "BRL",
+      });
+    }
+  }, [isPaid]);
+
   const heading = isPaid ? "Pagamento confirmado" : "Reserva em processamento";
   const subheading = isPaid
     ? "Sua reserva está garantida. Em breve entraremos em contato com mais informações."
-    : "Estamos confirmando seu pagamento com segurança.";
+    : "Estamos confirmando seu pagamento com segurança. Se você pagou via PIX, a confirmação pode levar alguns instantes — você também receberá um comprovante por e-mail do Mercado Pago.";
 
   return (
     <section className="mx-auto max-w-3xl px-6 py-16">

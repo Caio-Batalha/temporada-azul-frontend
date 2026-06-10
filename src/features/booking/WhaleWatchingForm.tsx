@@ -171,6 +171,16 @@ const WhaleWatchingForm = () => {
       });
 
       const checkout = await createCheckoutSession(hold.booking_id);
+
+      // Meta Pixel — InitiateCheckout
+      if (typeof window !== "undefined" && (window as any).fbq) {
+        (window as any).fbq("track", "InitiateCheckout", {
+          value: pricing.totalCents / 100,
+          currency: "BRL",
+          num_items: values.ticket_count,
+        });
+      }
+
       window.location.href = checkout.checkout_url;
     } catch (error) {
       const apiError = error as ApiError;
@@ -644,6 +654,12 @@ const WhaleWatchingForm = () => {
           <p className="mt-2 text-xs text-red-600">{errors.terms_accepted.message}</p>
         )}
       </div>
+
+      <p className="text-xs text-ink-500 rounded-xl border border-ocean-100 bg-white/60 px-4 py-3 leading-relaxed">
+        <strong>Pagando via PIX:</strong> após confirmar o pagamento no seu banco, você receberá
+        um comprovante por e-mail do Mercado Pago. Não se preocupe caso não seja redirecionado
+        automaticamente para esta página — sua reserva estará garantida.
+      </p>
 
       <PrimaryButton
         type="submit"
