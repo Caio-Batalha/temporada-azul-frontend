@@ -43,13 +43,13 @@ const ReservationModal = ({ open, onClose }: ReservationModalProps) => {
           <Link
             to="/avista-baleias"
             onClick={onClose}
-            className="rounded-2xl border-2 border-ocean-400 bg-gradient-to-br from-ocean-50 via-white to-ocean-100 p-5 text-ink-700 shadow-[0_10px_34px_rgba(0,167,240,0.28)] transition hover:-translate-y-0.5 hover:border-ocean-500 hover:shadow-[0_14px_42px_rgba(0,167,240,0.38)]"
+            className="rounded-2xl border-2 border-ocean-300 bg-gradient-to-br from-ocean-400 via-ocean-500 to-ocean-600 p-5 text-white shadow-[0_14px_38px_rgba(0,132,194,0.45)] transition hover:-translate-y-0.5 hover:shadow-[0_18px_46px_rgba(0,132,194,0.55)]"
           >
-            <p className="inline-flex items-center rounded-full bg-ocean-500 px-3 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-white">
+            <p className="inline-flex items-center rounded-full bg-white px-3 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-ocean-700">
               Compre aqui
             </p>
-            <p className="mt-2 font-display text-2xl text-ink-800">Avistamento de Baleias</p>
-            <p className="mt-2 text-sm text-ink-600">
+            <p className="mt-2 font-display text-2xl text-white">Avistamento de Baleias</p>
+            <p className="mt-2 text-sm text-white/90">
               Escolha a data, preencha os dados e pague com segurança.
             </p>
           </Link>
