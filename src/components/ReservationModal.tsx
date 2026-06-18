@@ -40,9 +40,13 @@ const ReservationModal = ({ open, onClose }: ReservationModalProps) => {
         </div>
 
         <div className="mt-6 grid gap-4 md:grid-cols-2">
-          <Link to="/avista-baleias" onClick={onClose} className={cardClass}>
-            <p className="text-xs uppercase tracking-[0.3em] text-deep-700">
-              Reserva online
+          <Link
+            to="/avista-baleias"
+            onClick={onClose}
+            className="rounded-2xl border-2 border-ocean-400 bg-gradient-to-br from-ocean-50 via-white to-ocean-100 p-5 text-ink-700 shadow-[0_10px_34px_rgba(0,167,240,0.28)] transition hover:-translate-y-0.5 hover:border-ocean-500 hover:shadow-[0_14px_42px_rgba(0,167,240,0.38)]"
+          >
+            <p className="inline-flex items-center rounded-full bg-ocean-500 px-3 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-white">
+              Compre aqui
             </p>
             <p className="mt-2 font-display text-2xl text-ink-800">Avistamento de Baleias</p>
             <p className="mt-2 text-sm text-ink-600">
