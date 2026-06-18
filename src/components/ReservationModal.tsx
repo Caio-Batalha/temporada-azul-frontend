@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import { buildWhatsAppUrl } from "../config/contact";
 
 type ReservationModalProps = {
   open: boolean;
@@ -54,12 +53,7 @@ const ReservationModal = ({ open, onClose }: ReservationModalProps) => {
             </p>
           </Link>
 
-          <a
-            href={buildWhatsAppUrl(
-              "Olá! Quero fazer uma reserva de Pescarias com a Temporada Azul. Pode me passar detalhes e disponibilidade?",
-            )}
-            className={cardClass}
-          >
+          <Link to="/pescarias" onClick={onClose} className={cardClass}>
             <p className="text-xs uppercase tracking-[0.3em] text-deep-700">
               WhatsApp
             </p>
@@ -67,14 +61,9 @@ const ReservationModal = ({ open, onClose }: ReservationModalProps) => {
             <p className="mt-2 text-sm text-ink-600">
               Atendimento rápido para montar o roteiro ideal.
             </p>
-          </a>
+          </Link>
 
-          <a
-            href={buildWhatsAppUrl(
-              "Olá! Quero fazer uma reserva de Passeios pelas Praias (Vitória/Vila Velha) com a Temporada Azul. Pode me passar detalhes e disponibilidade?",
-            )}
-            className={cardClass}
-          >
+          <Link to="/praias" onClick={onClose} className={cardClass}>
             <p className="text-xs uppercase tracking-[0.3em] text-deep-700">
               WhatsApp
             </p>
@@ -82,14 +71,9 @@ const ReservationModal = ({ open, onClose }: ReservationModalProps) => {
             <p className="mt-2 text-sm text-ink-600">
               Rotas exclusivas com conforto e praticidade.
             </p>
-          </a>
+          </Link>
 
-          <a
-            href={buildWhatsAppUrl(
-              "Olá! Quero fazer uma reserva de Festas/Eventos a Bordo com a Temporada Azul. Pode me passar detalhes e disponibilidade?",
-            )}
-            className={cardClass}
-          >
+          <Link to="/churrasco-a-bordo" onClick={onClose} className={cardClass}>
             <p className="text-xs uppercase tracking-[0.3em] text-deep-700">
               WhatsApp
             </p>
@@ -97,7 +81,7 @@ const ReservationModal = ({ open, onClose }: ReservationModalProps) => {
             <p className="mt-2 text-sm text-ink-600">
               Eventos elegantes no mar, sob medida para o seu grupo.
             </p>
-          </a>
+          </Link>
         </div>
       </div>
     </div>
