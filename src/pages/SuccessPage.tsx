@@ -26,7 +26,7 @@ const SuccessPage = () => {
     if (isPaid && !purchaseFiredRef.current && typeof window !== "undefined" && (window as any).fbq) {
       purchaseFiredRef.current = true;
       (window as any).fbq("track", "Purchase", {
-        value: 400,
+        value: 350,
         currency: "BRL",
       });
     }
