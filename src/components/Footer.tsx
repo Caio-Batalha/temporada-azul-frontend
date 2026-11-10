@@ -47,7 +47,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="border-t border-deep-100 py-6 text-center text-xs text-ink-500">
-        © {new Date().getFullYear()} Temporada Azul. Todos os direitos reservados.
+        © {new Date().getFullYear()} Temporada Azul. Todos os direitos reservados. CNPJ 68.485.542/0001-35
       </div>
     </footer>
   );
